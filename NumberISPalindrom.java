@@ -1,4 +1,4 @@
-public class NumberIsPalindrom {
+public class NumberISPalindrom {
     public static boolean isPalindrom(int number) {
         int temp = number, reverseNumber = 0;
         if (number == 0 || number > 0) {
