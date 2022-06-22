@@ -7,28 +7,24 @@ class AdditionOfBinary {
         StringBuilder sb = new StringBuilder();
         while (i >= 0 || j >= 0) {
             int sum = carry;
-
-            sum = sum + Character.getNumericValue(number1.charAt(i));    
-            sum = sum + Character.getNumericValue(number2.charAt(j));
-
+            if(i>=0){
+                sum = sum + Character.getNumericValue(number1.charAt(i--));  
+            }
+            if(j>=0){
+                sum = sum + Character.getNumericValue(number2.charAt(j--));
+            }
             sb.append(sum % 2);
-            carry = sum / 2;
-            i--;
-            j--;
+            carry = sum / 2;         
         }
         if (carry != 0) {
             sb.append(carry);
         }
-
         return sb.reverse().toString();
     }
-
     public static void main(String[] args) {
-        String a = "1010"; // 1010
-        String b = "0101"; // 1001
-                           // 10011
+        String a = "1011"; // 1010
+        String b = "0111"; // 1001 // 10011
         String result = additionOfBinary(a, b);
         System.out.println(result);
-
     }
 }
