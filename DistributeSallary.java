@@ -1,11 +1,11 @@
 public class DistributeSallary {
-    public static int distributeSallry(int n) {
+    public static int distributeSallry(int NoOfDollers) {
         // 5 --> 1=1 2=2
         int numberOfPeople = 0;
         int distributedAmount = 0;
-        for (int i = 1; i <= n; i++) {
-            if ((distributedAmount + i) <= n) {
-                distributedAmount = distributedAmount + i;
+        for (int counter = 1; counter <= NoOfDollers; counter++) {
+            if ((distributedAmount + counter) <= NoOfDollers) {
+                distributedAmount = distributedAmount + counter;
                 numberOfPeople++;
             }
         }
